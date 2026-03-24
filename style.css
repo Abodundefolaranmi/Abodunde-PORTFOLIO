@@ -293,6 +293,56 @@ h1, h2, h3, h4, h5, h6 {
     .shape-2 { width: 200px; height: 280px; }
 }
 
+/* Stats Grid for Expertise Page */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.stat-card {
+    background: var(--color-white);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-card);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: var(--transition-standard);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(37, 99, 235, 0.1);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--color-blue);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    line-height: 1.4;
+}
+
+/* Specific Clean list */
+.clean-list {
+    list-style: none;
+    padding: 0;
+}
+.clean-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
 /* Section Defaults */
 .section {
     padding: 6rem 5%;
