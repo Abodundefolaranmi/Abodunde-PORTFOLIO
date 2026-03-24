@@ -431,8 +431,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+/* Ensure summary stays visible even after expanding */
 .case-card.expanded p.case-summary {
-    display: none; /* Hide summary to save space when expanded */
+    opacity: 0.8;
 }
 
 .case-details h4 {
