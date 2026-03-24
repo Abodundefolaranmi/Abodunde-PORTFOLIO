@@ -416,6 +416,67 @@ h1, h2, h3, h4, h5, h6 {
 .bg-light h3 { color: var(--color-navy); }
 .bg-light p { color: var(--color-text-body); }
 
+/* Case Card Expandable Styles */
+.case-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.case-card.expanded .case-details {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.case-card.expanded p.case-summary {
+    display: none; /* Hide summary to save space when expanded */
+}
+
+.case-details h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.bg-navy .case-details h4, .bg-blue .case-details h4 {
+    color: var(--color-white);
+    opacity: 0.9;
+}
+
+.read-more-btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: var(--transition-standard);
+}
+
+.read-more-btn:hover {
+    opacity: 0.8;
+}
+
+.read-more-btn span {
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.case-card.expanded .read-more-btn span {
+    transform: rotate(45deg); /* Turn + into an x when opened */
+}
+
 /* Layout span */
 .bento-large {
     grid-column: span 2;
